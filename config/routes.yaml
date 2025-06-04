@@ -1,0 +1,40 @@
+home:
+    path: /
+    controller: App\Controller\HomeController::index
+
+psychotherapy:
+    path: /psychotherapie
+    controller: App\Controller\PsychotherapyController::index
+
+services:
+    path: /leistungen
+    controller: App\Controller\ServicesController::index
+
+costs:
+    path: /kostenuebernahme
+    controller: App\Controller\CostsController::index
+
+about:
+    path: /zur-person
+    controller: App\Controller\AboutController::index
+
+practice:
+    path: /praxis
+    controller: App\Controller\PracticeController::index
+
+contact:
+    path: /kontakt
+    controller: App\Controller\ContactController::index
+
+contact_submit:
+    path: /kontakt/senden
+    controller: App\Controller\ContactController::submit
+    methods: [POST]
+
+impressum:
+    path: /impressum
+    controller: App\Controller\LegalController::impressum
+
+datenschutz:
+    path: /datenschutz
+    controller: App\Controller\LegalController::datenschutz

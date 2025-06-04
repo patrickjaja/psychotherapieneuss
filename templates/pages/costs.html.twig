@@ -1,0 +1,165 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Kostenübernahme - Psychotherapie Neuss{% endblock %}
+
+{% block content %}
+<section class="py-12 bg-gradient-to-b from-primary/10 to-white">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-center mb-8">Kostenübernahme</h1>
+        <p class="text-lg text-center max-w-3xl mx-auto">
+            Die Kosten für eine Psychotherapie können je nach Versicherungstyp und individuellen Vereinbarungen bei der Versicherung variieren. Hier finden Sie eine Übersicht über die verschiedenen Möglichkeiten.
+        </p>
+    </div>
+</section>
+
+<section class="py-16">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-8">
+                <p class="text-lg">
+                    <strong>Wichtig:</strong> Es ist immer empfehlenswert, sich vor Beginn der Therapie über die Kostenübernahme und die Bedingungen bei der eigenen Versicherung zu informieren, um unerwartete finanzielle Belastungen zu vermeiden. Hierzu werden Sie im Rahmen des Erstgesprächs aufgeklärt und darin unterstützt, einen Antrag bei Ihrer Versicherung zu stellen.
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="flex items-start">
+                        <div class="bg-primary/10 p-3 rounded-lg mr-4 flex-shrink-0">
+                            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">1. Private Krankenversicherung</h3>
+                            <p class="text-gray-700">
+                                Die Kosten für eine Psychotherapie werden in aller Regel von der Versicherung übernommen. Voraussetzung hierfür ist, dass eine medizinische Notwendigkeit vorliegt. Es ist wichtig, sich vorab bei der eigenen Versicherung zu erkunden, welche Therapiefrequenzen und -formen abgedeckt sind, da der Versicherungsschutz in der PKV individuell unterschiedlich ist.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="flex items-start">
+                        <div class="bg-secondary/10 p-3 rounded-lg mr-4 flex-shrink-0">
+                            <svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">2. Beihilfe</h3>
+                            <p class="text-gray-700">
+                                Wenn ein Teil des Versicherungsschutzes von der Beihilfe abgedeckt ist, erfolgt i.d.R. auch die Kostenübernahme einer Psychotherapie über die zuständige Beihilfestelle i.d.H. des jeweiligen Anteils.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="flex items-start">
+                        <div class="bg-accent/10 p-3 rounded-lg mr-4 flex-shrink-0">
+                            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">3. Gesetzliche Krankenversicherung</h3>
+                            <p class="text-gray-700">
+                                In Deutschland übernehmen gesetzliche Krankenkassen in der Regel keine Kosten für Therapien in Privatpraxen. Stattdessen müssen Patienten, die in einer Privatpraxis behandelt werden möchten, die Kosten zunächst selbst tragen. In einigen Fällen kann eine Erstattung möglich sein, wenn die Therapie als notwendig erachtet wird. Dies hängt jedoch von der jeweiligen Krankenkasse ab (sog. Kostenerstattungsverfahren).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="flex items-start">
+                        <div class="bg-green-100 p-3 rounded-lg mr-4 flex-shrink-0">
+                            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">4. Selbstzahlende</h3>
+                            <p class="text-gray-700 mb-4">
+                                Wenn jemand nicht über eine private Krankenversicherung verfügt oder die Therapie nicht von der Krankenkasse übernommen wird, kann er oder sie die Kosten für die Psychotherapie selbst tragen. Die Gebührenhöhe je Sitzung richtet sich nach der Gebührenordnung für Ärzte und Psychotherapeuten (GOÄ/P). Hinzu kommen einzelne Kostenpunkte, wie Anamnese oder Diagnostik (einmalig bei Behandlungsbeginn).
+                            </p>
+                            <div class="bg-gray-100 rounded-lg p-4">
+                                <p class="font-semibold">Die Kostenstellung folgt der Honorarvereinbarung.</p>
+                                <a href="#" class="text-primary hover:text-primary/80 font-medium mt-2 inline-block">→ Honorarvereinbarung ansehen</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="flex items-start">
+                        <div class="bg-purple-100 p-3 rounded-lg mr-4 flex-shrink-0">
+                            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">5. Zusatzversicherungen</h3>
+                            <p class="text-gray-700">
+                                Wenn vorhanden, besteht die Möglichkeit, dass die Kosten für eine Psychotherapie durch eine Zusatzversicherung übernommen werden. Hier lohnt es sich, die Bedingungen der Zusatzversicherung zu prüfen.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-primary/5 rounded-lg p-8">
+                <h3 class="text-2xl font-bold mb-4">Checkliste für die Kostenübernahme</h3>
+                <p class="mb-6">Folgende Punkte sollten Sie vor Therapiebeginn klären:</p>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-primary mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Art Ihrer Krankenversicherung (privat, gesetzlich, Beihilfe)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-primary mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Umfang der Kostenübernahme für Psychotherapie</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-primary mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Anzahl der genehmigten Sitzungen</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-primary mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Notwendige Antragsverfahren</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-primary mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Selbstbeteiligung oder Eigenanteil</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-primary mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Möglichkeiten der Zusatzversicherung</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-12 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+        <h3 class="text-2xl font-bold mb-4">Unterstützung bei der Kostenklärung</h3>
+        <p class="text-lg mb-6">Gerne unterstütze ich Sie bei der Klärung der Kostenübernahme mit Ihrer Versicherung.</p>
+        <a href="/kontakt" class="inline-block bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
+            Beratungsgespräch vereinbaren
+        </a>
+    </div>
+</section>
+{% endblock %}

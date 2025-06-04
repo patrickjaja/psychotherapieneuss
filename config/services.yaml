@@ -1,0 +1,45 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/Entity/'
+            - '../src/Kernel.php'
+
+    App\Service\DatabaseService:
+        public: true
+        arguments:
+            $host: '%env(DB_HOST)%'
+            $dbname: '%env(DB_NAME)%'
+            $username: '%env(DB_USER)%'
+            $password: '%env(DB_PASS)%'
+
+    App\Service\MailerService:
+        public: true
+        arguments:
+            $smtpHost: '%env(SMTP_HOST)%'
+            $smtpPort: '%env(SMTP_PORT)%'
+            $smtpUser: '%env(SMTP_USER)%'
+            $smtpPass: '%env(SMTP_PASS)%'
+            $fromEmail: '%env(SMTP_FROM)%'
+            $fromName: '%env(SMTP_FROM_NAME)%'
+
+    twig.loader:
+        class: Twig\Loader\FilesystemLoader
+        public: true
+        arguments:
+            - '%kernel.project_dir%/templates'
+
+    Twig\Environment:
+        public: true
+        arguments:
+            - '@twig.loader'
+            - 
+                cache: false
+                debug: '%kernel.debug%'
+                strict_variables: '%kernel.debug%'
+                auto_reload: true

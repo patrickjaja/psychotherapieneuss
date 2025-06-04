@@ -1,0 +1,8 @@
+/vendor/
+/.env
+/var/
+/cache/
+.DS_Store
+*.log
+node_modules/
+package-lock.json

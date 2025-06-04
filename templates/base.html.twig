@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block meta_description %}Psychotherapie in Neuss - Professionelle Hilfe bei psychischen Erkrankungen. Dr. rer. nat. Pia Dornberger, Psychologische Psychotherapeutin mit Fachkunde Verhaltenstherapie.{% endblock %}">
+    <title>{% block title %}Psychotherapie Neuss - Dr. Pia Dornberger{% endblock %}</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10b981',
+                        secondary: '#3b82f6',
+                        accent: '#8b5cf6',
+                        neutral: '#374151',
+                        'neutral-light': '#f3f4f6'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    {% block stylesheets %}{% endblock %}
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+                <div class="flex items-center justify-between">
+                    <a href="/" class="text-2xl font-semibold text-primary">
+                        Psychotherapie Neuss
+                    </a>
+                    <button class="lg:hidden" id="mobile-menu-button">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <ul class="hidden lg:flex lg:space-x-8 mt-4 lg:mt-0" id="nav-menu">
+                    <li><a href="/" class="block py-2 lg:py-0 hover:text-primary transition-colors {% if current_page == 'home' %}text-primary font-medium{% endif %}">Startseite</a></li>
+                    <li><a href="/psychotherapie" class="block py-2 lg:py-0 hover:text-primary transition-colors {% if current_page == 'psychotherapy' %}text-primary font-medium{% endif %}">Psychotherapie</a></li>
+                    <li><a href="/leistungen" class="block py-2 lg:py-0 hover:text-primary transition-colors {% if current_page == 'services' %}text-primary font-medium{% endif %}">Leistungen</a></li>
+                    <li><a href="/kostenuebernahme" class="block py-2 lg:py-0 hover:text-primary transition-colors {% if current_page == 'costs' %}text-primary font-medium{% endif %}">Kostenübernahme</a></li>
+                    <li><a href="/zur-person" class="block py-2 lg:py-0 hover:text-primary transition-colors {% if current_page == 'about' %}text-primary font-medium{% endif %}">Zur Person</a></li>
+                    <li><a href="/praxis" class="block py-2 lg:py-0 hover:text-primary transition-colors {% if current_page == 'practice' %}text-primary font-medium{% endif %}">Praxis</a></li>
+                    <li><a href="/kontakt" class="block py-2 lg:py-0 hover:text-primary transition-colors {% if current_page == 'contact' %}text-primary font-medium{% endif %}">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="min-h-screen">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="font-semibold mb-3">Kontakt</h3>
+                    <p>Dr. rer. nat. Pia Dornberger</p>
+                    <p>Kanalstr. 49</p>
+                    <p>41460 Neuss</p>
+                    <p class="mt-2">
+                        <a href="mailto:info@psychotherapieneuss.de" class="hover:text-primary transition-colors">info@psychotherapieneuss.de</a>
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-3">Schnellzugriff</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/psychotherapie" class="hover:text-primary transition-colors">Psychotherapie</a></li>
+                        <li><a href="/leistungen" class="hover:text-primary transition-colors">Leistungen</a></li>
+                        <li><a href="/kontakt" class="hover:text-primary transition-colors">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-3">Rechtliches</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/impressum" class="hover:text-primary transition-colors">Impressum</a></li>
+                        <li><a href="/datenschutz" class="hover:text-primary transition-colors">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-sm">
+                <p>&copy; <?= date('Y') ?> Psychotherapie Neuss. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+    
+    {% block scripts %}{% endblock %}
+</body>
+</html>

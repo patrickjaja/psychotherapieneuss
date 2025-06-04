@@ -1,0 +1,25 @@
+# Redirect all requests to the public directory
+RewriteEngine On
+
+# Prevent direct access to .env and other sensitive files
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Prevent access to specific files
+<FilesMatch "(composer\.(json|lock)|package\.json|README\.md|setup\.php)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Redirect all requests to public directory
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ /public/$1 [L]
+
+# If a directory or a file exists in public, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Otherwise forward it to public/index.php
+RewriteRule ^ public/index.php [L]

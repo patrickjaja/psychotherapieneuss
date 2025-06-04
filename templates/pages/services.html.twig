@@ -1,0 +1,230 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Leistungen - Psychotherapie Neuss{% endblock %}
+
+{% block content %}
+<section class="py-12 bg-gradient-to-b from-primary/10 to-white">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-center mb-8">Leistungen</h1>
+        <p class="text-lg text-center max-w-3xl mx-auto">
+            Ich biete verschiedene Therapieformen und Unterstützungsmöglichkeiten an, um Ihnen bestmöglich bei Ihren individuellen Herausforderungen zu helfen.
+        </p>
+    </div>
+</section>
+
+<section class="py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="h-48 bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
+                    <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3">Kognitive Verhaltenstherapie</h3>
+                    <p class="text-gray-600 mb-4">Bewährte Therapieform zur Veränderung unerwünschter Verhaltensweisen und Gedankenmuster</p>
+                    <a href="#kvt" class="text-primary hover:text-primary/80 font-medium">Mehr erfahren →</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="h-48 bg-gradient-to-br from-secondary to-secondary/80 flex items-center justify-center">
+                    <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3">Coaching und Beratung</h3>
+                    <p class="text-gray-600 mb-4">Unterstützung bei der Erreichung persönlicher und beruflicher Ziele</p>
+                    <a href="#coaching" class="text-secondary hover:text-secondary/80 font-medium">Mehr erfahren →</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="h-48 bg-gradient-to-br from-accent to-accent/80 flex items-center justify-center">
+                    <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                    </svg>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3">Online-Therapie</h3>
+                    <p class="text-gray-600 mb-4">Flexible Therapiesitzungen über sichere Videotelefonie</p>
+                    <a href="#online" class="text-accent hover:text-accent/80 font-medium">Mehr erfahren →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-16">
+            <div id="kvt" class="bg-white rounded-lg shadow-lg p-8">
+                <div class="flex items-center mb-6">
+                    <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-3xl font-bold">Kognitive Verhaltenstherapie</h2>
+                </div>
+                
+                <div class="prose prose-lg max-w-none text-gray-700">
+                    <p class="mb-4">
+                        Die kognitive Verhaltenstherapie (KVT) ist eine bewährte Form der Psychotherapie, die darauf abzielt, unerwünschte Verhaltensweisen, Gedankenmuster und emotionale Reaktionen zu verändern. Sie basiert auf der Annahme, dass negative Denkmuster und Überzeugungen zu emotionalen Problemen und ungesunden Verhaltensweisen führen und durch gezielte Übungen und Strategien wieder verändert werden können.
+                    </p>
+                    <p class="mb-4">
+                        In der Verhaltenstherapie arbeitet man gemeinsam mit dem/der TherapeutIn daran, problematische Verhaltensweisen zu erkennen, zu verstehen und durch neue, hilfreiche Strategien zu ersetzen. Dabei kommen oft konkrete Techniken zum Einsatz, wie zum Beispiel das Erlernen von Bewältigungsstrategien, das Konfrontieren von Ängsten oder das Üben neuer Verhaltensweisen in sicheren Rahmen.
+                    </p>
+                    
+                    <div class="bg-gray-100 rounded-lg p-6 my-6">
+                        <h4 class="font-semibold mb-3">Diese Therapieform kann bei folgenden Problemen helfen:</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Ängste und Phobien</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Depressionen</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Zwänge</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Essstörungen</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Stressbewältigung</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <p>
+                        Sie ist in der Regel kurz- bis mittelfristig ausgelegt und umfasst oft praktische Übungen, Hausaufgaben und Verhaltensänderungen, um die erlernten Konzepte im Alltag anzuwenden. Die KVT ist evidenzbasiert und hat sich in zahlreichen Studien weltweit als wirksam bei der Behandlung von psychischen Störungen erwiesen.
+                    </p>
+                </div>
+            </div>
+
+            <div id="coaching" class="bg-white rounded-lg shadow-lg p-8">
+                <div class="flex items-center mb-6">
+                    <div class="bg-secondary/10 p-3 rounded-lg mr-4">
+                        <svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-3xl font-bold">Coaching und Beratung</h2>
+                </div>
+                
+                <div class="prose prose-lg max-w-none text-gray-700">
+                    <p class="mb-4">
+                        Ein Coaching bezieht sich auf einen unterstützenden Prozess, der darauf abzielt, KlientInnen bei der Erreichung persönlicher oder beruflicher Ziele zu helfen. Während Psychotherapie oft auf die Behandlung psychischer Störungen und die Bearbeitung emotionaler Probleme fokussiert ist, konzentriert sich Coaching mehr auf die Entwicklung von Fähigkeiten, die Verbesserung der Lebensqualität und die Förderung von Wachstum und Veränderung.
+                    </p>
+                    <p class="mb-4">
+                        Im Coaching-Prozess arbeiten Klienten und Coaches zusammen, um gemeinsam spezifische Ziele zu definieren, Strategien zu entwickeln und Fortschritte zu überwachen.
+                    </p>
+                    
+                    <div class="bg-gray-100 rounded-lg p-6 my-6">
+                        <h4 class="font-semibold mb-3">Das Coaching kann verschiedene Bereiche abdecken:</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-secondary mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Karriereentwicklung</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-secondary mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Stressmanagement</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-secondary mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Lebensbalance</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-secondary mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Entscheidungsfindung wichtiger Lebensbereiche</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-secondary mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Persönliche Entwicklung</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <p>
+                        Es ist wichtig zu beachten, dass Coaching nicht als Ersatz für Psychotherapie zu sehen ist, insbesondere wenn ernsthafte psychische Probleme vorliegen. In vielen Fällen kann Coaching jedoch eine wertvolle Ergänzung zur Psychotherapie sein, indem es der/dem KlientIn hilft, ihre/seine Ressourcen zu mobilisieren und ihre/seine Ziele aktiv zu verfolgen.
+                    </p>
+                </div>
+            </div>
+
+            <div id="online" class="bg-white rounded-lg shadow-lg p-8">
+                <div class="flex items-center mb-6">
+                    <div class="bg-accent/10 p-3 rounded-lg mr-4">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-3xl font-bold">Online-Therapie</h2>
+                </div>
+                
+                <div class="prose prose-lg max-w-none text-gray-700">
+                    <p class="mb-4">
+                        Bei der Online-Therapie wird die Videotelefonie als digitales Kommunikationsmittel eingesetzt. Diese Art der Therapie ermöglicht es Ihnen, mit der/dem TherapeutIn in Kontakt zu treten, ohne physisch in einer Praxis anwesend sein zu müssen.
+                    </p>
+                    
+                    <div class="bg-gray-100 rounded-lg p-6 my-6">
+                        <h4 class="font-semibold mb-3">Wichtige Aspekte der Online-Therapie:</h4>
+                        <div class="space-y-4">
+                            <div>
+                                <h5 class="font-semibold text-accent mb-2">Zugänglichkeit</h5>
+                                <p>Die Online-Therapie kann für Menschen, die in ländlichen Gebieten leben oder aufgrund körperlicher Einschränkungen Schwierigkeiten haben, zu einer Praxis zu gelangen, eine wertvolle Option sein. Sie bietet auch Flexibilität in Bezug auf Termine.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-accent mb-2">Datenschutz</h5>
+                                <p>Seriöse Online-Therapie-Plattformen legen großen Wert auf Datenschutz und Vertraulichkeit, um die Sicherheit der Klienten zu gewährleisten (z.B. Redmedical).</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-accent mb-2">Einsatz von Technologie</h5>
+                                <p>Sie benötigen in der Regel ein internetfähiges Gerät und eine stabile Internetverbindung, um an der Therapie teilnehmen zu können.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-accent mb-2">Wirksamkeit</h5>
+                                <p>Studien haben gezeigt, dass Online-Therapie in vielen Fällen genauso wirksam sein kann, wie persönliche Sitzungen, insbesondere bei der Behandlung von Angststörungen und Depressionen.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-12 bg-primary/5">
+    <div class="container mx-auto px-4 text-center">
+        <h3 class="text-2xl font-bold mb-4">Finden Sie die passende Unterstützung</h3>
+        <p class="text-lg mb-6">Gemeinsam finden wir den richtigen Weg für Ihre individuellen Bedürfnisse.</p>
+        <a href="/kontakt" class="inline-block bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
+            Erstgespräch vereinbaren
+        </a>
+    </div>
+</section>
+{% endblock %}

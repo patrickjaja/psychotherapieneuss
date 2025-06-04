@@ -1,0 +1,190 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Praxis - Psychotherapie Neuss{% endblock %}
+
+{% block content %}
+<section class="py-12 bg-gradient-to-b from-primary/10 to-white">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-center mb-8">Die Praxis</h1>
+    </div>
+</section>
+
+<section class="py-16">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+                <div class="prose prose-lg max-w-none text-gray-700">
+                    <p class="text-lg leading-relaxed mb-6">
+                        Die Praxis befindet sich in einem unter Denkmalschutz stehendem Altbau in der Nähe des Stadtgartens. Für gelegentliche Übungen kann dieser, nach Möglichkeit, auch im Rahmen der Therapie besucht werden. Auch die Innenstadt mit ihren zahlreichen Cafés und Restaurants ist fußläufig erreichbar.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-6">
+                        Eine wohnliche Atmosphäre und liebevolle Einrichtung der Praxis sind selbstverständlich. Da sich im Eingangsbereich Treppenstufen befinden, ist der Zugang zur Praxis leider nicht barrierefrei.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div>
+                    <img src="/images/Schreibtisch.jpeg" alt="Praxisraum" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div>
+                    <img src="/images/denkmailschutz.jpg" alt="Denkmalschutz Schild" class="rounded-lg shadow-lg w-full">
+                </div>
+            </div>
+
+            <div class="bg-primary/5 rounded-lg p-8">
+                <h2 class="text-2xl font-bold mb-6">Ausstattung und Ambiente</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="flex items-start">
+                        <svg class="w-6 h-6 text-primary mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold mb-1">Historischer Altbau</h3>
+                            <p class="text-gray-700">Denkmalgeschütztes Gebäude mit besonderem Charme</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-6 h-6 text-primary mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold mb-1">Wohnliche Atmosphäre</h3>
+                            <p class="text-gray-700">Liebevoll eingerichtete Räumlichkeiten</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-6 h-6 text-primary mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold mb-1">Ruhige Lage</h3>
+                            <p class="text-gray-700">In der Nähe des Stadtgartens gelegen</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-6 h-6 text-primary mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold mb-1">Zentrale Lage</h3>
+                            <p class="text-gray-700">Fußläufig zur Innenstadt</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-gray-100 p-6">
+                    <h2 class="text-2xl font-bold flex items-center">
+                        <svg class="w-8 h-8 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        So erreichen Sie die Praxis
+                    </h2>
+                </div>
+                
+                <div class="p-6">
+                    <div class="bg-primary/5 rounded-lg p-4 mb-6">
+                        <p class="font-semibold text-lg">Kanalstr. 49, 41460 Neuss</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="font-semibold text-lg mb-4 flex items-center">
+                                <svg class="w-6 h-6 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                                </svg>
+                                Mit öffentlichen Verkehrsmitteln
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">•</span>
+                                    <span><strong>Bushaltestelle Neustr.</strong> - 300m</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">•</span>
+                                    <span><strong>Neuss Hbf</strong> - 1,2km</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">•</span>
+                                    <span><strong>Zolltor</strong> - 500m</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">•</span>
+                                    <span><strong>Glockhammer</strong> - 550m</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">•</span>
+                                    <span><strong>Landestheater</strong> - 700m</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">•</span>
+                                    <span><strong>Friedrich-Ebert-Platz</strong> - 700m</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="font-semibold text-lg mb-4 flex items-center">
+                                <svg class="w-6 h-6 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                                Mit dem Auto
+                            </h3>
+                            <p class="text-gray-700 mb-3">
+                                <strong>Hinweis:</strong> Umliegende Straßen nur mit Parkticket
+                            </p>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">•</span>
+                                    <span><strong>Parkhaus Sparkasse</strong> - 400m</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">•</span>
+                                    <span><strong>Parkhaus Rathausgarage</strong> - 500m</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">•</span>
+                                    <span><strong>Parkhaus Niedertor</strong> - 750m</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-blue-50 border-l-4 border-blue-400 p-6 mb-4">
+                <div class="flex">
+                    <div class="flex-shrink-0">
+                        <svg class="h-6 w-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-sm text-blue-700">
+                            <strong>Interaktive Karte:</strong> Eine detaillierte Anfahrtskarte mit Google Maps finden Sie auf der <a href="/kontakt" class="underline font-semibold hover:text-blue-800">Kontaktseite</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6">
+                <div class="flex">
+                    <div class="flex-shrink-0">
+                        <svg class="h-6 w-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-sm text-yellow-700">
+                            <strong>Hinweis zur Barrierefreiheit:</strong> Da sich im Eingangsbereich Treppenstufen befinden, ist der Zugang zur Praxis leider nicht barrierefrei. Bitte kontaktieren Sie mich, wenn Sie besondere Unterstützung benötigen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
