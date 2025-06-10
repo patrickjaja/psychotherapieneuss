@@ -23,3 +23,9 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 # Otherwise forward it to public/index.php
 RewriteRule ^ public/index.php [L]
+
+# Basic Auth Protection
+AuthType Basic
+AuthName "Password Protected Area"
+AuthUserFile /customers/4/8/0/cfa0g3qr2/webroots/b47d98ef/.htpasswd
+Require valid-user
