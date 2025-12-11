@@ -66,8 +66,13 @@ class ContactController extends BaseController
             }
         }
 
+        $firstname = trim($request->request->get('firstname', ''));
+        $lastname = trim($request->request->get('lastname', ''));
+
         $data = [
-            'name' => trim($request->request->get('name', '')),
+            'firstname' => $firstname,
+            'lastname' => $lastname,
+            'name' => $firstname . ' ' . $lastname,
             'email' => trim($request->request->get('email', '')),
             'phone' => trim($request->request->get('phone', '')),
             'appointment_timeframe' => trim($request->request->get('appointment_timeframe', '')),
@@ -79,17 +84,17 @@ class ContactController extends BaseController
 
         // Validate required fields
         $errors = [];
-        if (empty($data['name'])) {
-            $errors[] = 'Name ist erforderlich';
+        if (empty($data['firstname'])) {
+            $errors[] = 'Vorname ist erforderlich';
+        }
+        if (empty($data['lastname'])) {
+            $errors[] = 'Nachname ist erforderlich';
         }
         if (empty($data['email']) || !filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
             $errors[] = 'Gültige E-Mail-Adresse ist erforderlich';
         }
         if (empty($data['phone'])) {
             $errors[] = 'Telefonnummer ist erforderlich';
-        }
-        if (empty($data['appointment_timeframe'])) {
-            $errors[] = 'Wunschtermin ist erforderlich';
         }
         if (empty($data['message'])) {
             $errors[] = 'Nachricht ist erforderlich';

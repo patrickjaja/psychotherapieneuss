@@ -12,11 +12,12 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#10b981',
-                        secondary: '#3b82f6',
-                        accent: '#8b5cf6',
-                        neutral: '#374151',
-                        'neutral-light': '#f3f4f6'
+                        primary: '#A0826D',
+                        secondary: '#8B7355',
+                        accent: '#C4A77D',
+                        neutral: '#5D534A',
+                        'neutral-light': '#FAF7F2',
+                        'footer-dark': '#3D352E'
                     },
                     fontFamily: {
                         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -31,7 +32,7 @@
     
     {% block stylesheets %}{% endblock %}
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-neutral-light text-neutral">
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <nav class="container mx-auto px-4 py-4">
             <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between">
@@ -49,7 +50,19 @@
                 <ul class="hidden lg:flex lg:space-x-8 mt-4 lg:mt-0" id="nav-menu">
                     <li><a href="/" class="block py-2 lg:py-0 hover:text-primary transition-colors {% if current_page == 'home' %}text-primary font-medium{% endif %}">Startseite</a></li>
                     <li><a href="/psychotherapie" class="block py-2 lg:py-0 hover:text-primary transition-colors {% if current_page == 'psychotherapy' %}text-primary font-medium{% endif %}">Psychotherapie</a></li>
-                    <li><a href="/leistungen" class="block py-2 lg:py-0 hover:text-primary transition-colors {% if current_page == 'services' %}text-primary font-medium{% endif %}">Leistungen</a></li>
+                    <li class="relative group">
+                        <a href="/leistungen" class="block py-2 lg:py-0 hover:text-primary transition-colors {% if current_page == 'services' %}text-primary font-medium{% endif %}">
+                            Leistungen
+                            <svg class="inline-block w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <ul class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <li><a href="/leistungen/kognitive-verhaltenstherapie" class="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition-colors">Kognitive Verhaltenstherapie</a></li>
+                            <li><a href="/leistungen/coaching" class="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition-colors">Coaching und Beratung</a></li>
+                            <li><a href="/leistungen/online-therapie" class="block px-4 py-2 hover:bg-primary/10 hover:text-primary transition-colors">Online-Therapie</a></li>
+                        </ul>
+                    </li>
                     <li><a href="/kostenuebernahme" class="block py-2 lg:py-0 hover:text-primary transition-colors {% if current_page == 'costs' %}text-primary font-medium{% endif %}">Kostenübernahme</a></li>
                     <li><a href="/zur-person" class="block py-2 lg:py-0 hover:text-primary transition-colors {% if current_page == 'about' %}text-primary font-medium{% endif %}">Zur Person</a></li>
                     <li><a href="/praxis" class="block py-2 lg:py-0 hover:text-primary transition-colors {% if current_page == 'practice' %}text-primary font-medium{% endif %}">Praxis</a></li>
@@ -63,17 +76,18 @@
         {% block content %}{% endblock %}
     </main>
 
-    <footer class="bg-gray-800 text-white py-8 mt-16">
+    <footer class="bg-footer-dark text-white py-8 mt-16">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                     <h3 class="font-semibold mb-3">Kontakt</h3>
                     <p>Dr. rer. nat. Pia Dornberger</p>
-                    <p>Kanalstr. 49</p>
+                    <p>Friedrichstr. 10</p>
                     <p>41460 Neuss</p>
                     <p class="mt-2">
                         <a href="mailto:info@psychotherapieneuss.de" class="hover:text-primary transition-colors">info@psychotherapieneuss.de</a>
                     </p>
+                    <p>Tel: 02131 539 54 31</p>
                 </div>
                 
                 <div>
@@ -94,7 +108,7 @@
                 </div>
             </div>
             
-            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-sm">
+            <div class="mt-8 pt-8 border-t border-neutral/50 text-center text-sm">
                 <p>&copy; <?= date('Y') ?> Psychotherapie Neuss. Alle Rechte vorbehalten.</p>
             </div>
         </div>

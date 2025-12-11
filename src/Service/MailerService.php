@@ -128,14 +128,6 @@ class MailerService
     public function createContactEmailHtml(array $data): string
     {
         $message = nl2br(htmlspecialchars($data['message']));
-        $timeframes = [
-            'innerhalb_einer_woche' => 'Innerhalb einer Woche',
-            'innerhalb_zwei_wochen' => 'Innerhalb von zwei Wochen',
-            'innerhalb_eines_monats' => 'Innerhalb eines Monats',
-            'innerhalb_zwei_monate' => 'Innerhalb von zwei Monaten',
-            'flexibel' => 'Zeitlich flexibel'
-        ];
-        $timeframe = $timeframes[$data['appointment_timeframe']] ?? $data['appointment_timeframe'];
         
         return <<<HTML
 <!DOCTYPE html>
@@ -159,8 +151,12 @@ class MailerService
         </div>
         <div class="content">
             <div class="field">
-                <div class="label">Name:</div>
-                <div class="value">{$data['name']}</div>
+                <div class="label">Vorname:</div>
+                <div class="value">{$data['firstname']}</div>
+            </div>
+            <div class="field">
+                <div class="label">Nachname:</div>
+                <div class="value">{$data['lastname']}</div>
             </div>
             <div class="field">
                 <div class="label">E-Mail:</div>
@@ -169,10 +165,6 @@ class MailerService
             <div class="field">
                 <div class="label">Telefon:</div>
                 <div class="value">{$data['phone']}</div>
-            </div>
-            <div class="field">
-                <div class="label">Wunschtermin:</div>
-                <div class="value">{$timeframe}</div>
             </div>
             <div class="field">
                 <div class="label">Nachricht:</div>
@@ -192,22 +184,13 @@ HTML;
 
     public function createContactEmailText(array $data): string
     {
-        $timeframes = [
-            'innerhalb_einer_woche' => 'Innerhalb einer Woche',
-            'innerhalb_zwei_wochen' => 'Innerhalb von zwei Wochen',
-            'innerhalb_eines_monats' => 'Innerhalb eines Monats',
-            'innerhalb_zwei_monate' => 'Innerhalb von zwei Monaten',
-            'flexibel' => 'Zeitlich flexibel'
-        ];
-        $timeframe = $timeframes[$data['appointment_timeframe']] ?? $data['appointment_timeframe'];
-        
         return <<<TEXT
 Neue Kontaktanfrage über die Website
 
-Name: {$data['name']}
+Vorname: {$data['firstname']}
+Nachname: {$data['lastname']}
 E-Mail: {$data['email']}
 Telefon: {$data['phone']}
-Wunschtermin: {$timeframe}
 
 Nachricht:
 {$data['message']}
@@ -220,14 +203,6 @@ TEXT;
     public function createConfirmationEmailHtml(array $data): string
     {
         $message = nl2br(htmlspecialchars($data['message']));
-        $timeframes = [
-            'innerhalb_einer_woche' => 'Innerhalb einer Woche',
-            'innerhalb_zwei_wochen' => 'Innerhalb von zwei Wochen',
-            'innerhalb_eines_monats' => 'Innerhalb eines Monats',
-            'innerhalb_zwei_monate' => 'Innerhalb von zwei Monaten',
-            'flexibel' => 'Zeitlich flexibel'
-        ];
-        $timeframe = $timeframes[$data['appointment_timeframe']] ?? $data['appointment_timeframe'];
         
         return <<<HTML
 <!DOCTYPE html>
@@ -255,7 +230,6 @@ TEXT;
             
             <div class="summary">
                 <h3>Zusammenfassung Ihrer Anfrage:</h3>
-                <p><strong>Wunschtermin:</strong> {$timeframe}</p>
                 <p><strong>Ihre Nachricht:</strong><br>{$message}</p>
                 <p><strong>Ihre Kontaktdaten:</strong><br>
                 E-Mail: {$data['email']}<br>
@@ -269,7 +243,7 @@ TEXT;
         </div>
         <div class="footer">
             <p>Psychotherapie Neuss<br>
-            Kanalstr. 49, 41460 Neuss<br>
+            Friedrichstr. 10, 41460 Neuss<br>
             info@psychotherapieneuss.de</p>
         </div>
     </div>
@@ -280,15 +254,6 @@ HTML;
 
     public function createConfirmationEmailText(array $data): string
     {
-        $timeframes = [
-            'innerhalb_einer_woche' => 'Innerhalb einer Woche',
-            'innerhalb_zwei_wochen' => 'Innerhalb von zwei Wochen',
-            'innerhalb_eines_monats' => 'Innerhalb eines Monats',
-            'innerhalb_zwei_monate' => 'Innerhalb von zwei Monaten',
-            'flexibel' => 'Zeitlich flexibel'
-        ];
-        $timeframe = $timeframes[$data['appointment_timeframe']] ?? $data['appointment_timeframe'];
-        
         return <<<TEXT
 Vielen Dank für Ihre Kontaktanfrage
 
@@ -297,8 +262,6 @@ Sehr geehrte/r {$data['name']},
 vielen Dank für Ihre Kontaktaufnahme. Ich habe Ihre Anfrage erhalten und werde mich schnellstmöglich bei Ihnen melden.
 
 Zusammenfassung Ihrer Anfrage:
-
-Wunschtermin: {$timeframe}
 
 Ihre Nachricht:
 {$data['message']}
@@ -314,7 +277,7 @@ Dr. rer. nat. Pia Dornberger
 
 --
 Psychotherapie Neuss
-Kanalstr. 49, 41460 Neuss
+Friedrichstr. 10, 41460 Neuss
 info@psychotherapieneuss.de
 TEXT;
     }

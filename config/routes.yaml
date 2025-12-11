@@ -10,6 +10,18 @@ services:
     path: /leistungen
     controller: App\Controller\ServicesController::index
 
+services_kvt:
+    path: /leistungen/kognitive-verhaltenstherapie
+    controller: App\Controller\ServicesController::kvt
+
+services_coaching:
+    path: /leistungen/coaching
+    controller: App\Controller\ServicesController::coaching
+
+services_online:
+    path: /leistungen/online-therapie
+    controller: App\Controller\ServicesController::onlineTherapie
+
 costs:
     path: /kostenuebernahme
     controller: App\Controller\CostsController::index
