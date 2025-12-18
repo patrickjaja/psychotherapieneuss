@@ -7,7 +7,6 @@ CREATE TABLE IF NOT EXISTS contact_emails (
     sender_name VARCHAR(255) NOT NULL,
     sender_email VARCHAR(255) NOT NULL,
     sender_phone VARCHAR(50) NOT NULL,
-    appointment_timeframe VARCHAR(50),
     message TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     ip_address VARCHAR(45),

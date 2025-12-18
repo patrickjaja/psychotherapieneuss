@@ -57,7 +57,6 @@ class DatabaseService
                 sender_name VARCHAR(255) NOT NULL,
                 sender_email VARCHAR(255) NOT NULL,
                 sender_phone VARCHAR(50) NOT NULL,
-                appointment_timeframe VARCHAR(50),
                 message TEXT NOT NULL,
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 ip_address VARCHAR(45),
@@ -93,15 +92,14 @@ class DatabaseService
 
     public function saveContactEmail(array $data): int
     {
-        $sql = "INSERT INTO contact_emails (sender_name, sender_email, sender_phone, appointment_timeframe, message, ip_address, user_agent) 
-                VALUES (:name, :email, :phone, :appointment_timeframe, :message, :ip, :user_agent)";
-        
+        $sql = "INSERT INTO contact_emails (sender_name, sender_email, sender_phone, message, ip_address, user_agent)
+                VALUES (:name, :email, :phone, :message, :ip, :user_agent)";
+
         $stmt = $this->connection->prepare($sql);
         $stmt->execute([
             'name' => $data['name'],
             'email' => $data['email'],
             'phone' => $data['phone'],
-            'appointment_timeframe' => $data['appointment_timeframe'] ?? null,
             'message' => $data['message'],
             'ip' => $data['ip_address'] ?? $_SERVER['REMOTE_ADDR'] ?? null,
             'user_agent' => $data['user_agent'] ?? $_SERVER['HTTP_USER_AGENT'] ?? null

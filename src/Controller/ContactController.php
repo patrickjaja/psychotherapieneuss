@@ -75,7 +75,6 @@ class ContactController extends BaseController
             'name' => $firstname . ' ' . $lastname,
             'email' => trim($request->request->get('email', '')),
             'phone' => trim($request->request->get('phone', '')),
-            'appointment_timeframe' => trim($request->request->get('appointment_timeframe', '')),
             'message' => trim($request->request->get('message', '')),
             'timestamp' => date('d.m.Y H:i'),
             'ip_address' => $request->getClientIp(),
