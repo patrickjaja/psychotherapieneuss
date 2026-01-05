@@ -119,4 +119,8 @@ Custom Tailwind colors defined in `tailwind.config.js`:
 - **Always commit `public/css/app.css`** after rebuilding Tailwind CSS
 - Test locally first at http://localhost:8000
 - Use hard refresh (Ctrl+Shift+R) to clear browser cache after deployment
-- Privacy policy must be updated when adding external services (Google Forms, etc.)
+- **Privacy policy (datenschutz.html.twig):**
+  - Must be updated when adding external services (Google Forms, etc.)
+  - **DSGVO requirement:** Update the "Stand" date whenever changing the privacy policy
+  - Use format: "05.01.2026" and "5. Januar 2026" (both numeric and spelled out)
+  - Location: Bottom of privacy policy in `<div class="bg-neutral-light">` section
