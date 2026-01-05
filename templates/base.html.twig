@@ -24,11 +24,6 @@
     <meta name="twitter:description" content="{% block twitter_description %}{{ block('meta_description') }}{% endblock %}">
     <meta name="twitter:image" content="{% block twitter_image %}{{ block('og_image') }}{% endblock %}">
 
-    <!-- Preconnect for Performance -->
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <!-- Structured Data: Psychologist Schema -->
     <script type="application/ld+json">
     {
@@ -65,27 +60,8 @@
     }
     </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#A0826D',
-                        secondary: '#8B7355',
-                        accent: '#C4A77D',
-                        neutral: '#5D534A',
-                        'neutral-light': '#FAF7F2',
-                        'footer-dark': '#3D352E'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Local Tailwind CSS - GDPR Compliant (no external CDN) -->
+    <link href="/css/app.css" rel="stylesheet">
 
     {% block stylesheets %}{% endblock %}
 </head>
@@ -205,31 +181,6 @@
                     dropdownToggle.setAttribute('aria-expanded', 'false');
                 }
             });
-        }
-    </script>
-
-    <!-- GDPR Cookie Consent Banner -->
-    <div id="cookie-consent" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#333; color:#fff; padding:20px; z-index:9999; box-shadow:0 -2px 10px rgba(0,0,0,0.2);">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p class="text-sm md:text-base">
-                Diese Website verwendet externe Ressourcen (Google Fonts, Tailwind CSS). Mit der Nutzung stimmen Sie der Verwendung zu.
-                <a href="/datenschutz" class="underline hover:text-primary transition-colors">Mehr erfahren</a>
-            </p>
-            <button onclick="acceptCookies()" class="bg-primary hover:bg-secondary text-white font-medium px-6 py-2 rounded transition-colors whitespace-nowrap">
-                Akzeptieren
-            </button>
-        </div>
-    </div>
-
-    <script>
-        function acceptCookies() {
-            localStorage.setItem('cookies_accepted', 'true');
-            document.getElementById('cookie-consent').style.display = 'none';
-        }
-
-        // Show cookie consent if not yet accepted
-        if (!localStorage.getItem('cookies_accepted')) {
-            document.getElementById('cookie-consent').style.display = 'block';
         }
     </script>
 
