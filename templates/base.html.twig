@@ -5,7 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{% block meta_description %}Psychotherapie in Neuss - Professionelle Hilfe bei psychischen Erkrankungen. Dr. rer. nat. Pia Dornberger, Psychologische Psychotherapeutin mit Fachkunde Verhaltenstherapie.{% endblock %}">
     <title>{% block title %}Psychotherapie Neuss - Dr. Pia Dornberger{% endblock %}</title>
-    
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{% block canonical_url %}https://www.psychotherapieneuss.de/{% endblock %}">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:site_name" content="Psychotherapie Neuss">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{% block og_title %}{{ block('title') }}{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}{{ block('meta_description') }}{% endblock %}">
+    <meta property="og:url" content="{{ block('canonical_url') }}">
+    <meta property="og:image" content="{% block og_image %}https://www.psychotherapieneuss.de/images/praxis-hero.jpg{% endblock %}">
+    <meta property="og:locale" content="de_DE">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% block twitter_title %}{{ block('title') }}{% endblock %}">
+    <meta name="twitter:description" content="{% block twitter_description %}{{ block('meta_description') }}{% endblock %}">
+    <meta name="twitter:image" content="{% block twitter_image %}{{ block('og_image') }}{% endblock %}">
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Structured Data: Psychologist Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Psychologist",
+      "@id": "https://www.psychotherapieneuss.de/#organization",
+      "name": "Praxis für Psychotherapie Dr. rer. nat. Pia Dornberger",
+      "image": "https://www.psychotherapieneuss.de/images/praxis-hero.jpg",
+      "url": "https://www.psychotherapieneuss.de",
+      "telephone": "+49-2131-5395431",
+      "email": "info@psychotherapieneuss.de",
+      "medicalSpecialty": "Verhaltenstherapie",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Friedrichstr. 10",
+        "addressLocality": "Neuss",
+        "postalCode": "41460",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.1985,
+        "longitude": 6.6852
+      },
+      "areaServed": ["Neuss", "Düsseldorf", "Krefeld", "Mönchengladbach"],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "paymentAccepted": ["Gesetzliche Krankenversicherung", "Private Krankenversicherung"],
+      "currenciesAccepted": "EUR"
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -26,10 +85,8 @@
             }
         }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     {% block stylesheets %}{% endblock %}
 </head>
 <body class="bg-neutral-light text-neutral">
@@ -150,7 +207,32 @@
             });
         }
     </script>
-    
+
+    <!-- GDPR Cookie Consent Banner -->
+    <div id="cookie-consent" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#333; color:#fff; padding:20px; z-index:9999; box-shadow:0 -2px 10px rgba(0,0,0,0.2);">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-sm md:text-base">
+                Diese Website verwendet externe Ressourcen (Google Fonts, Tailwind CSS). Mit der Nutzung stimmen Sie der Verwendung zu.
+                <a href="/datenschutz" class="underline hover:text-primary transition-colors">Mehr erfahren</a>
+            </p>
+            <button onclick="acceptCookies()" class="bg-primary hover:bg-secondary text-white font-medium px-6 py-2 rounded transition-colors whitespace-nowrap">
+                Akzeptieren
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function acceptCookies() {
+            localStorage.setItem('cookies_accepted', 'true');
+            document.getElementById('cookie-consent').style.display = 'none';
+        }
+
+        // Show cookie consent if not yet accepted
+        if (!localStorage.getItem('cookies_accepted')) {
+            document.getElementById('cookie-consent').style.display = 'block';
+        }
+    </script>
+
     {% block scripts %}{% endblock %}
 </body>
 </html>

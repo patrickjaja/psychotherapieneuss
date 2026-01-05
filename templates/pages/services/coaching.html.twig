@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Coaching und Beratung - Psychotherapie Neuss{% endblock %}
+{% block title %}Coaching und Beratung - Neuss{% endblock %}
+{% block meta_description %}Professionelles Coaching und psychologische Beratung in Neuss. Unterstützung bei beruflichen und persönlichen Herausforderungen. Individuelle Lösungen.{% endblock %}
+{% block canonical_url %}https://www.psychotherapieneuss.de/leistungen/coaching{% endblock %}
 
 {% block content %}
 <section class="py-12 bg-gradient-to-b from-secondary/10 to-white">
@@ -89,4 +91,17 @@
         </a>
     </div>
 </section>
+
+<!-- Structured Data: Service Schema for Coaching -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Coaching und psychologische Beratung",
+  "description": "Professionelles Coaching und psychologische Beratung bei beruflichen und persönlichen Herausforderungen.",
+  "provider": {
+    "@id": "https://www.psychotherapieneuss.de/#organization"
+  }
+}
+</script>
 {% endblock %}

@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Online-Therapie - Psychotherapie Neuss{% endblock %}
+{% block title %}Online-Therapie - Psychotherapie von zu Hause{% endblock %}
+{% block meta_description %}Online-Psychotherapie aus Neuss. Sichere Videosprechstunden via datenschutzkonformer Software. Flexible Termine von zu Hause aus. Kassenleistung.{% endblock %}
+{% block canonical_url %}https://www.psychotherapieneuss.de/leistungen/online-therapie{% endblock %}
 
 {% block content %}
 <section class="py-12 bg-gradient-to-b from-accent/10 to-white">
@@ -68,4 +70,17 @@
         </a>
     </div>
 </section>
+
+<!-- Structured Data: Service Schema for Online Therapy -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalTherapy",
+  "name": "Online-Psychotherapie",
+  "description": "Sichere Online-Psychotherapie via Videosprechstunde. Datenschutzkonform und flexibel von zu Hause aus.",
+  "provider": {
+    "@id": "https://www.psychotherapieneuss.de/#organization"
+  }
+}
+</script>
 {% endblock %}

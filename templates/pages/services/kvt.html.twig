@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Kognitive Verhaltenstherapie - Psychotherapie Neuss{% endblock %}
+{% block title %}Kognitive Verhaltenstherapie (KVT) - Neuss{% endblock %}
+{% block meta_description %}Kognitive Verhaltenstherapie (KVT) in Neuss. Wissenschaftlich fundiertes Verfahren bei Depression, Angststörungen, Zwängen. Kassenärztliche Zulassung.{% endblock %}
+{% block canonical_url %}https://www.psychotherapieneuss.de/leistungen/kognitive-verhaltenstherapie{% endblock %}
 
 {% block content %}
 <section class="py-12 bg-gradient-to-b from-primary/10 to-white">
@@ -89,4 +91,17 @@
         </a>
     </div>
 </section>
+
+<!-- Structured Data: Service Schema for KVT -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalTherapy",
+  "name": "Kognitive Verhaltenstherapie (KVT)",
+  "description": "Wissenschaftlich fundierte Verhaltenstherapie bei Depression, Angststörungen, Zwängen und weiteren psychischen Erkrankungen.",
+  "provider": {
+    "@id": "https://www.psychotherapieneuss.de/#organization"
+  }
+}
+</script>
 {% endblock %}

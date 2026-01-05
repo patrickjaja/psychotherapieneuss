@@ -16,6 +16,14 @@ abstract class BaseController
     protected function render(string $template, array $parameters = []): Response
     {
         $content = $this->twig->render($template, $parameters);
-        return new Response($content);
+        $response = new Response($content);
+
+        // Set proper cache headers for SEO
+        // Allow Google and browsers to cache pages for 1 hour
+        $response->setPublic();
+        $response->setMaxAge(3600); // 1 hour
+        $response->headers->addCacheControlDirective('must-revalidate');
+
+        return $response;
     }
 }

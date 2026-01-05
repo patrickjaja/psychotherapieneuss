@@ -1,3 +1,11 @@
+robots:
+    path: /robots.txt
+    controller: App\Controller\RobotsController::robots
+
+sitemap:
+    path: /sitemap.xml
+    controller: App\Controller\SitemapController::sitemap
+
 home:
     path: /
     controller: App\Controller\HomeController::index
