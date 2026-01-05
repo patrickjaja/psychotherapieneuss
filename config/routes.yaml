@@ -30,6 +30,26 @@ services_online:
     path: /leistungen/online-therapie
     controller: App\Controller\ServicesController::onlineTherapie
 
+services_diagnostik:
+    path: /leistungen/diagnostik
+    controller: App\Controller\ServicesController::diagnostik
+
+services_diagnostik_bdi:
+    path: /leistungen/diagnostik/bdi-ii
+    controller: App\Controller\ServicesController::diagnostikBdi
+
+services_diagnostik_scid:
+    path: /leistungen/diagnostik/scid-5-spq
+    controller: App\Controller\ServicesController::diagnostikScid
+
+services_diagnostik_scl:
+    path: /leistungen/diagnostik/scl-90
+    controller: App\Controller\ServicesController::diagnostikScl
+
+services_diagnostik_ctq:
+    path: /leistungen/diagnostik/ctq
+    controller: App\Controller\ServicesController::diagnostikCtq
+
 costs:
     path: /kostenuebernahme
     controller: App\Controller\CostsController::index

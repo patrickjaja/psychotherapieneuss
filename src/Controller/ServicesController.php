@@ -30,4 +30,39 @@ class ServicesController extends BaseController
             'current_page' => 'services'
         ]);
     }
+
+    public function diagnostik()
+    {
+        return $this->render('pages/services/diagnostik.html.twig', [
+            'current_page' => 'services'
+        ]);
+    }
+
+    public function diagnostikBdi()
+    {
+        return $this->render('pages/services/diagnostik/bdi-ii.html.twig', [
+            'current_page' => 'services'
+        ]);
+    }
+
+    public function diagnostikScid()
+    {
+        return $this->render('pages/services/diagnostik/scid-5-spq.html.twig', [
+            'current_page' => 'services'
+        ]);
+    }
+
+    public function diagnostikScl()
+    {
+        return $this->render('pages/services/diagnostik/scl-90.html.twig', [
+            'current_page' => 'services'
+        ]);
+    }
+
+    public function diagnostikCtq()
+    {
+        return $this->render('pages/services/diagnostik/ctq.html.twig', [
+            'current_page' => 'services'
+        ]);
+    }
 }
