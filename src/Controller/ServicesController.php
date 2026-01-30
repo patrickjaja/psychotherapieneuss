@@ -24,7 +24,7 @@ class ServicesController extends BaseController
             }
         }
 
-        if ($user !== 'patient' || $pass !== 'neuss2026') {
+        if ($user !== 'patient' || $pass !== 'Diagnostik35') {
             $response = new Response('Zugang verweigert.', 401);
             $response->headers->set('WWW-Authenticate', 'Basic realm="Geschützter Bereich - Zugangsdaten erhalten Sie von Ihrer Therapeutin"');
             return $response;
