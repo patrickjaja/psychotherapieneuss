@@ -1,3 +1,11 @@
+# Basic Auth for /leistungen/diagnostik (semi-geschützter Bereich)
+<If "%{REQUEST_URI} =~ m#^/leistungen/diagnostik#">
+    AuthType Basic
+    AuthName "Geschützter Bereich - Zugangsdaten erhalten Sie von Ihrer Therapeutin"
+    AuthUserFile /home/cfa0g3qr2_ssh/webroots/b47d98ef/.htpasswd
+    Require valid-user
+</If>
+
 # Enable URL rewriting
 RewriteEngine On
 
