@@ -101,7 +101,7 @@ psychotherapieneuss/
 docker-compose exec php rm -rf var/cache/*
 
 # Remote (SSH)
-sshpass -p 'IlovePatrick123' ssh -o StrictHostKeyChecking=no cfa0g3qr2_ssh@ssh.cfa0g3qr2.service.one "cd /home/cfa0g3qr2_ssh/webroots/b47d98ef && rm -rf var/cache/*"
+sshpass -p You need to ask me ssh ssh -o StrictHostKeyChecking=no cfa0g3qr2_ssh@ssh.cfa0g3qr2.service.one "cd /home/cfa0g3qr2_ssh/webroots/b47d98ef && rm -rf var/cache/*"
 ```
 
 ## Color Scheme
