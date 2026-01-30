@@ -44,7 +44,7 @@ git push
 ### SSH Credentials
 - Host: `ssh.cfa0g3qr2.service.one`
 - User: `cfa0g3qr2_ssh`
-- Password: `IlovePatrick123`
+- Password: You need to ask me
 - Path: `/home/cfa0g3qr2_ssh/webroots/b47d98ef`
 
 ### Deploy Command
