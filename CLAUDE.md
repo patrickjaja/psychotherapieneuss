@@ -49,7 +49,7 @@ git push
 
 ### Deploy Command
 ```bash
-sshpass -p 'IlovePatrick123' ssh -o StrictHostKeyChecking=no cfa0g3qr2_ssh@ssh.cfa0g3qr2.service.one "cd /home/cfa0g3qr2_ssh/webroots/b47d98ef && git pull origin main"
+sshpass -p You need to ask me ssh -o StrictHostKeyChecking=no cfa0g3qr2_ssh@ssh.cfa0g3qr2.service.one "cd /home/cfa0g3qr2_ssh/webroots/b47d98ef && git pull origin main"
 ```
 
 ## Docker Setup
