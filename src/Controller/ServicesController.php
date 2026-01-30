@@ -8,8 +8,21 @@ class ServicesController extends BaseController
 {
     private function requireDiagnostikAuth(Request $request): ?Response
     {
-        $user = $request->headers->get('PHP_AUTH_USER');
-        $pass = $request->headers->get('PHP_AUTH_PW');
+        $user = $request->server->get('PHP_AUTH_USER');
+        $pass = $request->server->get('PHP_AUTH_PW');
+
+        // CGI/FastCGI: parse Authorization header manually
+        if (!$user) {
+            $auth = $request->server->get('HTTP_AUTHORIZATION')
+                ?? $request->server->get('REDIRECT_HTTP_AUTHORIZATION')
+                ?? '';
+            if (stripos($auth, 'basic ') === 0) {
+                $decoded = base64_decode(substr($auth, 6));
+                if ($decoded && str_contains($decoded, ':')) {
+                    [$user, $pass] = explode(':', $decoded, 2);
+                }
+            }
+        }
 
         if ($user !== 'patient' || $pass !== 'neuss2026') {
             $response = new Response('Zugang verweigert.', 401);
