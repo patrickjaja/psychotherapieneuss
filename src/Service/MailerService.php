@@ -243,7 +243,7 @@ TEXT;
         </div>
         <div class="footer">
             <p>Psychotherapie Neuss<br>
-            Friedrichstr. 10, 41460 Neuss<br>
+            Büchel 35, 41460 Neuss<br>
             info@psychotherapieneuss.de</p>
         </div>
     </div>
@@ -277,7 +277,7 @@ Dr. rer. nat. Pia Dornberger
 
 --
 Psychotherapie Neuss
-Friedrichstr. 10, 41460 Neuss
+Büchel 35, 41460 Neuss
 info@psychotherapieneuss.de
 TEXT;
     }

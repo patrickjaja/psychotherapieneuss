@@ -2,6 +2,11 @@
 
 Alle Änderungen am Projekt psychotherapieneuss.de, gruppiert nach Tag.
 
+## 2026-02-24
+
+- Adresse von "Friedrichstr. 10" zu "Büchel 35" in allen Seiten, Impressum, Datenschutz, E-Mail-Signatur und Schema.org-Daten geändert
+- Praxis-Seite auf "Altbaucharme" umgeschrieben (hohe Decken, lichtdurchflutete Räume, Altbau-Atmosphäre)
+
 ## 2026-01-30
 
 - Basic Auth für /leistungen/diagnostik eingerichtet (semi-geschützter Bereich für Patienten)
