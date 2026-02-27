@@ -2,6 +2,12 @@
 
 Alle Änderungen am Projekt psychotherapieneuss.de, gruppiert nach Tag.
 
+## 2026-02-27
+
+- Telefonnummer von "02131 539 54 31" zu "***REMOVED***" geändert (Footer, Kontakt, Impressum)
+- Praxis-Seite: "hohe Decken" durch "altes Fachwerk" ersetzt
+- Neues Praxisbild (IMG-20260227-WA0022.jpg) auf Praxis-Seite eingefügt
+
 ## 2026-02-24
 
 - Adresse von "Friedrichstr. 10" zu "Büchel 35" in allen Seiten, Impressum, Datenschutz, E-Mail-Signatur und Schema.org-Daten geändert
