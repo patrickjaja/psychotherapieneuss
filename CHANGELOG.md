@@ -2,6 +2,10 @@
 
 Alle Änderungen am Projekt psychotherapieneuss.de, gruppiert nach Tag.
 
+## 2026-02-28
+
+- Telefonnummer von "***REMOVED***" zu "02131 / 53 18 244" geändert (Footer, Kontakt, Impressum)
+
 ## 2026-02-27
 
 - Telefonnummer von "02131 539 54 31" zu "***REMOVED***" geändert (Footer, Kontakt, Impressum)
