@@ -2,6 +2,10 @@
 
 Alle Änderungen am Projekt psychotherapieneuss.de, gruppiert nach Tag.
 
+## 2026-03-04
+
+- Abschnitt "So erreichen Sie die Praxis" von Praxis-Seite entfernt (doppelte/fehlerhafte Anfahrtsinformationen, Kontaktseite ist maßgeblich)
+
 ## 2026-02-28
 
 - Telefonnummer zu "02131 / 53 18 244" geändert (Footer, Kontakt, Impressum)
